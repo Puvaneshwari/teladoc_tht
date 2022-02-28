@@ -4,7 +4,8 @@ This project intends to test 2 workflows.
 1. Create User
 2. Delete User
 
-#**Setup**
+**Setup**
+
 This is a python project which uses selenium and pytest to power the test suite. This project also uses chrome webdriver.
 1. Install python 3.10
 2. Install pip 21.1.2 
