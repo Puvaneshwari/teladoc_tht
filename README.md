@@ -13,6 +13,7 @@ This is a python project which uses selenium and pytest to power the test suite.
 5. cd to the project folder
 6. Install pytest: pip install -U pytest
 7. Install selenium: pip install -U selenium
-8. Run tests: 
+8. Install webdriver_manager: pip install webdriver_manager
+9. Run tests: 
    1. cd <project folder>/src/com/teladoc
    2. py.test test_user.py
