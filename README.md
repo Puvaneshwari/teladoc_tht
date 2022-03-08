@@ -9,12 +9,12 @@ This project intends to test 2 workflows.
 This is a python project which uses selenium and pytest to power the test suite. This project also uses chrome webdriver.
 1. Install python 3.10
 2. Install pip 21.1.2 
-3. Install chrome web driver: https://chromedriver.chromium.org/downloads
+3. Install webdriver manager: pip install webdriver-manager
 4. Clone project to local: git clone https://github.com/Puvaneshwari/teladoc_tht.git
 5. cd to the project folder
 6. Install pytest: pip install -U pytest
 7. Install selenium: pip install -U selenium
 8. Install webdriver_manager: pip install webdriver_manager
 9. Run tests: 
-   1. cd <project folder>/src/com/teladoc
+   1. cd <project folder>/src/com/teladocinterview
    2. py.test test_user.py

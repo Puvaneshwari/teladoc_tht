@@ -59,9 +59,23 @@ def click_delete_by_user_name(driver, row_number):
     row_num(integer) : row number to delete the user.
     """
     click_element_by_xpath(driver, xpath_elem="//tbody/tr[" + str(row_number) + "]/td[11]/button")
-    logging.info("Clicked the delete element")
+    logging.info("Clicked the delete icon")
     click_element_by_css(driver, css_elem="button.btn.ng-scope.ng-binding.btn-primary")
     logging.info("Deleted the specified row")
+
+
+def delete_user_test_data(driver, user_data_records):
+    """
+    This method is used to delete the user data.
+    driver(Object)          : selenium driver object
+    user_data_records(List) : user data list
+    """
+    for user_rec_name in user_data_records:
+        row_number = find_row_num_by_user_name(user_rec_name)
+        if row_number != -1:
+            click_delete_by_user_name(row_number)
+        else:
+            logging.error("Specified user not found in the user table")
 
 
 def enter_input_text_by_name(driver, elem_name, inp_txt):
@@ -93,7 +107,7 @@ def click_element_by_css(driver, css_elem):
 def select_dropdown_value_by_name(driver, drpdown_elem_name, txt):
     """
     driver(Object)   : selenium driver object
-    elem_name(String): Locator element name
+    dropdown_elem_name(String): Locator element name
     txt(String)      : Text to select in the dropdown
     """
     select_txt = Select(driver.find_element(By.NAME, drpdown_elem_name))
@@ -103,7 +117,7 @@ def select_dropdown_value_by_name(driver, drpdown_elem_name, txt):
 
 def click_element_by_xpath(driver, xpath_elem):
     """
-    driver(Object)   : selenium driver objectt
+    driver(Object)   : selenium driver object
     xpath_elem(String): Locator element xpath to click
     """
     btn = WebDriverWait(driver, 10).until(exp_cond.visibility_of_element_located((By.XPATH, xpath_elem)))

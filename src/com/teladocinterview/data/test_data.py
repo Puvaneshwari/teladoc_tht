@@ -1,3 +1,5 @@
+add_user_css = "button.btn.btn-link.pull-right"
+save_css = "button.btn.btn-success"
 valid_user_data_obj = [
     {
         "field": "fn",
@@ -303,7 +305,7 @@ invalid_user_blank_mobile_num = [
 invalid_user_blank_role_id = [
     {
         "field": "fn",
-        "value": "",
+        "value": "shyam",
         "locator": "FirstName",
         "type": "input"
     },
